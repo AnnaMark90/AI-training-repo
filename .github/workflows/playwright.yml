@@ -78,6 +78,8 @@ jobs:
         if: ${{ !cancelled() && env.SESSION_URL != '' }}
         run: |
           node -e '
+            const fs = require("fs");
+            const p = "test-results/results.json";
             if (!fs.existsSync(p)) { console.log("::warning::No results.json produced"); process.exit(0); }
             const r = JSON.parse(fs.readFileSync(p, "utf8"));
             const stats = r.stats || {};
