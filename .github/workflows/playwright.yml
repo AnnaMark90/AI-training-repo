@@ -86,8 +86,9 @@ jobs:
             const lines = [];
             lines.push("## Playwright summary");
             lines.push("");
-            lines.push(`- **Passed:** ${stats.passed ?? 0}`);
-            lines.push(`- **Failed:** ${stats.failed ?? 0}`);
+            // The JSON reporter has no passed/failed keys: "expected" are passed tests, "unexpected" are failed ones.
+            lines.push(`- **Passed:** ${stats.expected ?? 0}`);
+            lines.push(`- **Failed:** ${stats.unexpected ?? 0}`);
             lines.push(`- **Flaky:** ${stats.flaky ?? 0}`);
             lines.push(`- **Skipped:** ${stats.skipped ?? 0}`);
             lines.push(`- **Duration:** ${((stats.duration ?? 0) / 1000).toFixed(1)}s`);
