@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       run-mode:
-        description: 'Which set to run: full suite or a curated smoke gate'
+        description: "Which set to run: full suite or a curated smoke gate"
         type: choice
         options:
           - full
@@ -15,17 +15,17 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-        cache: npm
-    - name: Install dependencies
-      run: npm ci
-    - name: Lint
-      run: npm run lint
-    - name: Typecheck
-      run: npm run typecheck
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
   e2e:
     needs: quality
     timeout-minutes: 30
@@ -40,75 +40,72 @@ jobs:
       ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
       ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-        cache: npm
-    - name: Install dependencies
-      run: npm ci
-    - name: Skip e2e without a stand
-      if: ${{ env.SESSION_URL == '' }}
-      run: echo "::notice::Secret SESSION_URL is not set, e2e tests skipped. Add SESSION_URL (and ADMIN_EMAIL / ADMIN_PASSWORD) in Settings > Secrets and variables > Actions."
-    # Cache the browser download only. --with-deps still runs every time: on a fresh runner the
-    # apt system libraries are not part of this cache, and skipping them fails tests for the
-    # wrong reason.
-    - name: Cache Playwright browsers
-      if: ${{ env.SESSION_URL != '' }}
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/ms-playwright
-        key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-    - name: Install Playwright Browsers
-      if: ${{ env.SESSION_URL != '' }}
-      run: npx playwright install --with-deps chromium
-    - name: Run Playwright tests
-      if: ${{ env.SESSION_URL != '' }}
-      run: npm run ${{ github.event.inputs.run-mode == 'smoke' && 'test:smoke' || 'test' }}
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() && env.SESSION_URL != '' }}
-      with:
-        name: playwright-report
-        path: |
-          playwright-report/
-          test-results/results.json
-        retention-days: 30
-    # Surface the result in the run log so a red run is diagnosable without downloading the artifact.
-    - name: Test summary
-      if: ${{ !cancelled() && env.SESSION_URL != '' }}
-      run: |
-        node -e '
-          const fs = require("fs");
-          const p = "test-results/results.json";
-          if (!fs.existsSync(p)) { console.log("::warning::No results.json produced"); process.exit(0); }
-          const r = JSON.parse(fs.readFileSync(p, "utf8"));
-          const stats = r.stats || {};
-          const lines = [];
-          lines.push("## Playwright summary");
-          lines.push("");
-          lines.push(`- **Passed:** ${stats.passed ?? 0}`);
-          lines.push(`- **Failed:** ${stats.failed ?? 0}`);
-          lines.push(`- **Flaky:** ${stats.flaky ?? 0}`);
-          lines.push(`- **Skipped:** ${stats.skipped ?? 0}`);
-          lines.push(`- **Duration:** ${((stats.duration ?? 0) / 1000).toFixed(1)}s`);
-          const failed = (r.suites || []).flatMap(collectFailed);
-          if (failed.length) {
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Skip e2e without a stand
+        if: ${{ env.SESSION_URL == '' }}
+        run: echo "::notice::Secret SESSION_URL is not set, e2e tests skipped. Add SESSION_URL (and ADMIN_EMAIL / ADMIN_PASSWORD) in Settings > Secrets and variables > Actions."
+      # Cache the browser download only. --with-deps still runs every time: on a fresh runner the
+      # apt system libraries are not part of this cache, and skipping them fails tests for the
+      # wrong reason.
+      - name: Cache Playwright browsers
+        if: ${{ env.SESSION_URL != '' }}
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Install Playwright Browsers
+        if: ${{ env.SESSION_URL != '' }}
+        run: npx playwright install --with-deps chromium
+      - name: Run Playwright tests
+        if: ${{ env.SESSION_URL != '' }}
+        run: npm run ${{ github.event.inputs.run-mode == 'smoke' && 'test:smoke' || 'test' }}
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() && env.SESSION_URL != '' }}
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/results.json
+          retention-days: 30
+      # Surface the result in the run log so a red run is diagnosable without downloading the artifact.
+      - name: Test summary
+        if: ${{ !cancelled() && env.SESSION_URL != '' }}
+        run: |
+          node -e '
+            if (!fs.existsSync(p)) { console.log("::warning::No results.json produced"); process.exit(0); }
+            const r = JSON.parse(fs.readFileSync(p, "utf8"));
+            const stats = r.stats || {};
+            const lines = [];
+            lines.push("## Playwright summary");
             lines.push("");
-            lines.push("### Failed tests");
-            lines.push("");
-            failed.forEach(f => lines.push(`- ${f}`));
-          }
-          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n");
-          function collectFailed(suite) {
-            const out = [];
-            for (const spec of suite.specs || []) {
-              for (const t of spec.tests || []) {
-                const err = (t.results || []).find(res => res.status === "failed");
-                if (err) out.push(`${spec.file || ""}: ${t.title}`);
-              }
+            lines.push(`- **Passed:** ${stats.passed ?? 0}`);
+            lines.push(`- **Failed:** ${stats.failed ?? 0}`);
+            lines.push(`- **Flaky:** ${stats.flaky ?? 0}`);
+            lines.push(`- **Skipped:** ${stats.skipped ?? 0}`);
+            lines.push(`- **Duration:** ${((stats.duration ?? 0) / 1000).toFixed(1)}s`);
+            const failed = (r.suites || []).flatMap(collectFailed);
+            if (failed.length) {
+              lines.push("");
+              lines.push("### Failed tests");
+              lines.push("");
+              failed.forEach(f => lines.push(`- ${f}`));
             }
-            for (const child of suite.suites || []) out.push(...collectFailed(child));
-            return out;
-          }
-        '
-
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n");
+            function collectFailed(suite) {
+              const out = [];
+              for (const spec of suite.specs || []) {
+                for (const t of spec.tests || []) {
+                  const err = (t.results || []).find(res => res.status === "failed");
+                  if (err) out.push(`${spec.file || ""}: ${t.title}`);
+                }
+              }
+              for (const child of suite.suites || []) out.push(...collectFailed(child));
+              return out;
+            }
+          '
