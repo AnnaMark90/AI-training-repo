@@ -91,23 +91,22 @@ jobs:
             lines.push(`- **Flaky:** ${stats.flaky ?? 0}`);
             lines.push(`- **Skipped:** ${stats.skipped ?? 0}`);
             lines.push(`- **Duration:** ${((stats.duration ?? 0) / 1000).toFixed(1)}s`);
-            const failed = (r.suites || []).flatMap(collectFailed);
-            if (failed.length) {
-              lines.push("");
-              lines.push("### Failed tests");
-              lines.push("");
-              failed.forEach(f => lines.push(`- ${f}`));
-            }
+            // Use the final test status (retries already applied): "unexpected" covers failed and timedOut,
+            // a test that passed on retry is "flaky". The title lives on the spec, not on the test.
+            const failed = [];
+            const flaky = [];
+            (r.suites || []).forEach(collect);
+            if (failed.length) lines.push("", "### Failed tests", "", ...failed.map(f => `- ${f}`));
+            if (flaky.length) lines.push("", "### Flaky tests", "", ...flaky.map(f => `- ${f}`));
             fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n");
-            function collectFailed(suite) {
-              const out = [];
+            function collect(suite) {
               for (const spec of suite.specs || []) {
                 for (const t of spec.tests || []) {
-                  const err = (t.results || []).find(res => res.status === "failed");
-                  if (err) out.push(`${spec.file || ""}: ${t.title}`);
+                  const name = `[${t.projectName}] ${spec.file}:${spec.line} › ${spec.title}`;
+                  if (t.status === "unexpected") failed.push(name);
+                  if (t.status === "flaky") flaky.push(name);
                 }
               }
-              for (const child of suite.suites || []) out.push(...collectFailed(child));
-              return out;
+              (suite.suites || []).forEach(collect);
             }
           '
