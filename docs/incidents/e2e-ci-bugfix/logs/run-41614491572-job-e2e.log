@@ -1,0 +1,569 @@
+e2e	Set up job	2026-11-03T09:52:53.9553330Z Current runner version: '2.338.2'
+e2e	Set up job	2026-11-03T09:52:53.9580049Z ##[group]Runner Image Provisioner
+e2e	Set up job	2026-11-03T09:52:53.9580978Z Hosted Compute Agent
+e2e	Set up job	2026-11-03T09:52:53.9581571Z Version: 20261015.610
+e2e	Set up job	2026-11-03T09:52:53.9582237Z Commit: 267fdb4e8bbec4ab5ea31367f3a00d5c480c7656
+e2e	Set up job	2026-11-03T09:52:53.9583069Z Build Date: 2026-10-14T17:06:54Z
+e2e	Set up job	2026-11-03T09:52:53.9583807Z Worker ID: {c2d5b870-f749-44e7-94a0-e8931a54a590}
+e2e	Set up job	2026-11-03T09:52:53.9584590Z Region: us-east-1
+e2e	Set up job	2026-11-03T09:52:53.9585154Z Cloud: AWS
+e2e	Set up job	2026-11-03T09:52:53.9585729Z ##[endgroup]
+e2e	Set up job	2026-11-03T09:52:53.9587358Z ##[group]Operating System
+e2e	Set up job	2026-11-03T09:52:53.9588024Z Ubuntu
+e2e	Set up job	2026-11-03T09:52:53.9588613Z 24.04.5
+e2e	Set up job	2026-11-03T09:52:53.9589213Z LTS
+e2e	Set up job	2026-11-03T09:52:53.9589987Z ##[endgroup]
+e2e	Set up job	2026-11-03T09:52:53.9590575Z ##[group]Runner Image
+e2e	Set up job	2026-11-03T09:52:53.9591555Z Image: ubuntu-24.04
+e2e	Set up job	2026-11-03T09:52:53.9592129Z Version: 20261018.96.1
+e2e	Set up job	2026-11-03T09:52:53.9593238Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261018.96/images/ubuntu/Ubuntu2404-Readme.md
+e2e	Set up job	2026-11-03T09:52:53.9595091Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261018.96
+e2e	Set up job	2026-11-03T09:52:53.9596109Z ##[endgroup]
+e2e	Set up job	2026-11-03T09:52:53.9597316Z ##[group]GITHUB_TOKEN Permissions
+e2e	Set up job	2026-11-03T09:52:53.9599973Z Contents: read
+e2e	Set up job	2026-11-03T09:52:53.9600680Z Metadata: read
+e2e	Set up job	2026-11-03T09:52:53.9601222Z Packages: read
+e2e	Set up job	2026-11-03T09:52:53.9601756Z ##[endgroup]
+e2e	Set up job	2026-11-03T09:52:53.9604068Z Secret source: Actions
+e2e	Set up job	2026-11-03T09:52:53.9605012Z Cache mode: write
+e2e	Set up job	2026-11-03T09:52:53.9606001Z Prepare workflow directory
+e2e	Set up job	2026-11-03T09:52:54.0112749Z Prepare all required actions
+e2e	Set up job	2026-11-03T09:52:54.0166673Z Getting action download info
+e2e	Set up job	2026-11-03T09:52:54.2063987Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+e2e	Set up job	2026-11-03T09:52:55.0641358Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+e2e	Set up job	2026-11-03T09:52:55.2019716Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+e2e	Set up job	2026-11-03T09:52:55.3513301Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+e2e	Set up job	2026-11-03T09:52:55.7226634Z Complete job name: e2e
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7980140Z ##[group]Run actions/checkout@v4
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7981582Z with:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7982425Z   repository: AnnaMark90/AI-training-repo
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7988731Z   token: ***
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7989752Z   ssh-strict: true
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7990568Z   ssh-user: git
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7991439Z   persist-credentials: true
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7992346Z   clean: true
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7993151Z   sparse-checkout-cone-mode: true
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7994240Z   fetch-depth: 1
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7995027Z   fetch-tags: false
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7995858Z   show-progress: true
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7996704Z   lfs: false
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7997469Z   submodules: false
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7998321Z   set-safe-directory: true
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.7999250Z   allow-unsafe-pr-checkout: false
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8000580Z env:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8001716Z   SESSION_URL: ***
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8002617Z   ADMIN_URL: 
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8003438Z   ADMIN_EMAIL: ***
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8004297Z   ADMIN_PASSWORD: ***
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8005230Z ##[endgroup]
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8841798Z Syncing repository: AnnaMark90/AI-training-repo
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8844391Z ##[group]Getting Git version info
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8845709Z Working directory is '/home/runner/work/AI-training-repo/AI-training-repo'
+e2e	Run actions/checkout@v4	2026-11-03T09:52:55.8847807Z [command]/usr/bin/git version
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0243035Z git version 2.55.0
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0258529Z ##[endgroup]
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0269236Z Temporarily overriding HOME='/home/runner/work/_temp/2ff666d9-8bfc-4df8-a116-1934673cbb1a' before making global git config changes
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0271910Z Adding repository directory to the temporary git global config as a safe directory
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0274171Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AI-training-repo/AI-training-repo
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0316478Z Deleting the contents of '/home/runner/work/AI-training-repo/AI-training-repo'
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0319085Z ##[group]Initializing the repository
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0321958Z [command]/usr/bin/git init /home/runner/work/AI-training-repo/AI-training-repo
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0712535Z hint: Using 'master' as the name for the initial branch. This default branch name
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0714309Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0715925Z hint: to use in all of your new repositories, which will suppress this warning,
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0717190Z hint: call:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0717920Z hint:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0718848Z hint: 	git config --global init.defaultBranch <name>
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0720081Z hint:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0721128Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0722666Z hint: 'development'. The just-created branch can be renamed via this command:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0723974Z hint:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0724723Z hint: 	git branch -m <name>
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0725542Z hint:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0726653Z hint: Disable this message with "git config set advice.defaultBranchName false"
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0731649Z Initialized empty Git repository in /home/runner/work/AI-training-repo/AI-training-repo/.git/
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0737623Z [command]/usr/bin/git remote add origin https://github.com/AnnaMark90/AI-training-repo
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0810795Z ##[endgroup]
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0812388Z ##[group]Disabling automatic garbage collection
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0813602Z [command]/usr/bin/git config --local gc.auto 0
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0836195Z ##[endgroup]
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0837614Z ##[group]Setting up auth
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0840133Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.0865004Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.3316489Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.3342799Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.3496523Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.3523877Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.3673914Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.3700663Z ##[endgroup]
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.3702505Z ##[group]Fetching the repository
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.3708539Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +063c6a52f72122b5151569ae5f46980113b702a7:refs/remotes/origin/feature/CI-01-cicd-pipeline
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5868788Z From https://github.com/AnnaMark90/AI-training-repo
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5869991Z  * [new ref]         063c6a52f72122b5151569ae5f46980113b702a7 -> origin/feature/CI-01-cicd-pipeline
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5872365Z ##[endgroup]
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5873103Z ##[group]Determining the checkout info
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5874788Z ##[endgroup]
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5879298Z [command]/usr/bin/git sparse-checkout disable
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5919572Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5940722Z ##[group]Checking out the ref
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.5950647Z [command]/usr/bin/git checkout --progress --force -B feature/CI-01-cicd-pipeline refs/remotes/origin/feature/CI-01-cicd-pipeline
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.6008711Z Switched to a new branch 'feature/CI-01-cicd-pipeline'
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.6015109Z branch 'feature/CI-01-cicd-pipeline' set up to track 'origin/feature/CI-01-cicd-pipeline'.
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.6017747Z ##[endgroup]
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.6048202Z [command]/usr/bin/git log -1 --format=%H
+e2e	Run actions/checkout@v4	2026-11-03T09:52:56.6066821Z 063c6a52f72122b5151569ae5f46980113b702a7
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6269081Z ##[group]Run actions/setup-node@v4
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6269746Z with:
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6270059Z   node-version: lts/*
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6270353Z   cache: npm
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6270639Z   always-auth: false
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6270944Z   check-latest: false
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6272872Z   token: ***
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6273136Z env:
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6273503Z   SESSION_URL: ***
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6273796Z   ADMIN_URL: 
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6274086Z   ADMIN_EMAIL: ***
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6274438Z   ADMIN_PASSWORD: ***
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.6274750Z ##[endgroup]
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.7278275Z Attempt to resolve LTS alias from manifest...
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.7359606Z (node:2112) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:56.7360736Z (Use `node --trace-deprecation ...` to show where the warning was created)
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:57.3742687Z Attempting to download 26...
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:57.3745889Z Acquiring 26.13.0 - x64 from https://github.com/actions/node-versions/releases/download/26.13.0-41378513395/node-26.13.0-linux-x64.tar.gz
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:57.6678842Z Extracting ...
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:57.6773824Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/df17fad4-d1c8-4e56-a4e7-ababe4f61c2e -f /home/runner/work/_temp/89c2646c-a3fb-4fdc-96ca-5b7703f9a934
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:58.8243922Z Adding to the cache ...
+e2e	Run actions/setup-node@v4	2026-11-03T09:52:59.7840123Z ##[group]Environment details
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.1960866Z node: v26.13.0
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.1961499Z npm: 11.20.0
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.1961808Z yarn: 1.22.22
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.1962716Z ##[endgroup]
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.1975358Z [command]/opt/hostedtoolcache/node/26.13.0/x64/bin/npm config get cache
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.2690934Z /home/runner/.npm
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.3491334Z Cache hit for: node-cache-Linux-x64-npm-de9188d1e37b984acaa7791c9ef2330df7e7d103901551d3ed2f2230a2ed9c40
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.3573956Z (node:2112) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.5516154Z Received 23088305 of 23088305 (100.0%), 130.3 MBs/sec
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.5516844Z Cache Size: ~22 MB (23088305 B)
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.5532787Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2c675bdc-ecad-4537-a7de-872df218f510/cache.tzst -P -C /home/runner/work/AI-training-repo/AI-training-repo --use-compress-program unzstd
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.5976820Z Cache restored successfully
+e2e	Run actions/setup-node@v4	2026-11-03T09:53:00.5988308Z Cache restored from key: node-cache-Linux-x64-npm-de9188d1e37b984acaa7791c9ef2330df7e7d103901551d3ed2f2230a2ed9c40
+e2e	Install dependencies	2026-11-03T09:53:00.6140788Z ##[group]Run npm ci
+e2e	Install dependencies	2026-11-03T09:53:00.6141231Z npm ci
+e2e	Install dependencies	2026-11-03T09:53:00.6176903Z shell: /usr/bin/bash -e {0}
+e2e	Install dependencies	2026-11-03T09:53:00.6177243Z env:
+e2e	Install dependencies	2026-11-03T09:53:00.6177789Z   SESSION_URL: ***
+e2e	Install dependencies	2026-11-03T09:53:00.6178035Z   ADMIN_URL: 
+e2e	Install dependencies	2026-11-03T09:53:00.6178316Z   ADMIN_EMAIL: ***
+e2e	Install dependencies	2026-11-03T09:53:00.6178607Z   ADMIN_PASSWORD: ***
+e2e	Install dependencies	2026-11-03T09:53:00.6178890Z ##[endgroup]
+e2e	Install dependencies	2026-11-03T09:53:20.5900732Z 
+e2e	Install dependencies	2026-11-03T09:53:20.5907241Z added 104 packages, and audited 105 packages in 20s
+e2e	Install dependencies	2026-11-03T09:53:20.5907737Z 
+e2e	Install dependencies	2026-11-03T09:53:20.5908006Z 32 packages are looking for funding
+e2e	Install dependencies	2026-11-03T09:53:20.5908373Z   run `npm fund` for details
+e2e	Install dependencies	2026-11-03T09:53:20.6991707Z 
+e2e	Install dependencies	2026-11-03T09:53:20.6993141Z 12 moderate severity vulnerabilities
+e2e	Install dependencies	2026-11-03T09:53:20.6993655Z 
+e2e	Install dependencies	2026-11-03T09:53:20.6993998Z To address all issues (including breaking changes), run:
+e2e	Install dependencies	2026-11-03T09:53:20.6994535Z   npm audit fix --force
+e2e	Install dependencies	2026-11-03T09:53:20.6995295Z 
+e2e	Install dependencies	2026-11-03T09:53:20.6995504Z Run `npm audit` for details.
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7875614Z ##[group]Run actions/cache@v4
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7875928Z with:
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7876209Z   path: ~/.cache/ms-playwright
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7876621Z   key: playwright-Linux-de9188d1e37b984acaa7791c9ef2330df7e7d103901551d3ed2f2230a2ed9c40
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7877089Z   enableCrossOsArchive: false
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7877362Z   fail-on-cache-miss: false
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7877623Z   lookup-only: false
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7877877Z   save-always: false
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7878112Z env:
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7878613Z   SESSION_URL: ***
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7878840Z   ADMIN_URL: 
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7879111Z   ADMIN_EMAIL: ***
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7879597Z   ADMIN_PASSWORD: ***
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.7880208Z ##[endgroup]
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.8672618Z (node:2190) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.8673366Z (Use `node --trace-deprecation ...` to show where the warning was created)
+e2e	Cache Playwright browsers	2026-11-03T09:53:20.9260501Z Cache not found for input keys: playwright-Linux-de9188d1e37b984acaa7791c9ef2330df7e7d103901551d3ed2f2230a2ed9c40
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9358778Z ##[group]Run npx playwright install --with-deps chromium
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9359829Z npx playwright install --with-deps chromium
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9400461Z shell: /usr/bin/bash -e {0}
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9400939Z env:
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9401546Z   SESSION_URL: ***
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9401955Z   ADMIN_URL: 
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9402297Z   ADMIN_EMAIL: ***
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9402755Z   ADMIN_PASSWORD: ***
+e2e	Install Playwright Browsers	2026-11-03T09:53:20.9403097Z ##[endgroup]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.4436994Z Installing dependencies...
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.4499944Z Switching to root user to install dependencies...
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.5571696Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.5820637Z Get:5 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.6527069Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [617 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.6721200Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [685 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.6765567Z Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.6922857Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.7078876Z Get:8 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.7481598Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.7813735Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1408 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.8404847Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [311 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.8620019Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1707 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.9082383Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [343 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.9239734Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1813 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.9680226Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [412 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:21.9841735Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.3 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:22.0874908Z Get:16 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1153 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:22.5000195Z Get:17 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [232 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:22.5874889Z Get:18 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1224 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:22.7202190Z Get:19 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [246 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:22.8057907Z Get:20 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1721 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:22.9493643Z Get:21 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [394 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:23.0342543Z Get:22 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.4 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:29.9763621Z Fetched 12.7 MB in 2s (8426 kB/s)
+e2e	Install Playwright Browsers	2026-11-03T09:53:30.8130076Z Reading package lists...
+e2e	Install Playwright Browsers	2026-11-03T09:53:30.8377020Z Reading package lists...
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.0250370Z Building dependency tree...
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.0255923Z Reading state information...
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1775997Z libasound2t64 is already the newest version (1.2.11-1ubuntu0.3).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1776768Z libasound2t64 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1777398Z libatk-bridge2.0-0t64 is already the newest version (2.52.0-1build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1777849Z libatk-bridge2.0-0t64 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1778334Z libatk1.0-0t64 is already the newest version (2.52.0-1build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1778702Z libatk1.0-0t64 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1779130Z libatspi2.0-0t64 is already the newest version (2.52.0-1build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1780413Z libatspi2.0-0t64 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1780817Z libcairo2 is already the newest version (1.18.0-3build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1781178Z libcairo2 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1781573Z libcups2t64 is already the newest version (2.4.7-1.2ubuntu7.14).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1782001Z libcups2t64 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1782370Z libdbus-1-3 is already the newest version (1.14.10-4ubuntu4.1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1782815Z libdbus-1-3 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1783284Z libdrm2 is already the newest version (2.4.125-1ubuntu0.1~24.04.2).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1783770Z libdrm2 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1784164Z libgbm1 is already the newest version (25.2.8-0ubuntu0.24.04.4).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1784599Z libgbm1 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1784953Z libnspr4 is already the newest version (2:4.35-1.1build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1785333Z libnspr4 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1785759Z libpango-1.0-0 is already the newest version (1.52.1+ds-1build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1786115Z libpango-1.0-0 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1786532Z libx11-6 is already the newest version (2:1.8.7-1ubuntu0.1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1786874Z libx11-6 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1787257Z libxcb1 is already the newest version (1.15-1ubuntu2).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1787593Z libxcb1 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1787984Z libxcomposite1 is already the newest version (1:0.4.5-1build3).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1788352Z libxcomposite1 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1788737Z libxdamage1 is already the newest version (1:1.1.6-1build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1789188Z libxdamage1 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1789800Z libxext6 is already the newest version (2:1.3.4-1build2).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1790437Z libxext6 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1790833Z libxfixes3 is already the newest version (1:6.0.0-2build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1791254Z libxfixes3 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1791609Z libxkbcommon0 is already the newest version (1.6.0-1build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1792004Z libxkbcommon0 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1792366Z libxrandr2 is already the newest version (2:1.5.2-2build1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1792736Z libxrandr2 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1793182Z fonts-noto-color-emoji is already the newest version (2.047-0ubuntu0.24.04.1).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1793663Z libfontconfig1 is already the newest version (2.15.0-1.1ubuntu2).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1794071Z libfontconfig1 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1794455Z libfreetype6 is already the newest version (2.13.2+dfsg-1ubuntu0.2).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1794888Z libfreetype6 set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1795431Z fonts-liberation is already the newest version (1:2.1.5-3).
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1795938Z fonts-liberation set to manually installed.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1796296Z The following additional packages will be installed:
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1796761Z   gir1.2-glib-2.0 libglib2.0-bin libglib2.0-data libnss3-tools
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1797168Z   xfonts-encodings xfonts-utils xserver-common
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1797462Z Suggested packages:
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1797768Z   low-memory-monitor
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1798042Z Recommended packages:
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.1798385Z   fonts-ipafont-mincho fonts-tlwg-loma xfonts-base
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2723995Z The following NEW packages will be installed:
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2724679Z   fonts-freefont-ttf fonts-ipafont-gothic fonts-tlwg-loma-otf fonts-unifont
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2733301Z   fonts-wqy-zenhei xfonts-cyrillic xfonts-encodings xfonts-scalable
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2733752Z   xfonts-utils
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2735773Z The following packages will be upgraded:
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2737338Z   gir1.2-glib-2.0 libglib2.0-0t64 libglib2.0-bin libglib2.0-data libnss3
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2742003Z   libnss3-tools xserver-common xvfb
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2893987Z 8 upgraded, 9 newly installed, 0 to remove and 54 not upgraded.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2894669Z Need to get 25.9 MB of archives.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2895168Z After this operation, 79.5 MB of additional disk space will be used.
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.2895612Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.3480759Z Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-ipafont-gothic all 00303-21ubuntu1 [3513 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.5232121Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-data all 2.80.0-6ubuntu3.10 [50.2 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.5638393Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-bin amd64 2.80.0-6ubuntu3.10 [97.9 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.6006296Z Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-glib-2.0 amd64 2.80.0-6ubuntu3.10 [183 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.6419588Z Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglib2.0-0t64 amd64 2.80.0-6ubuntu3.10 [1548 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.7394641Z Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 fonts-freefont-ttf all 20211204+svn4273-2 [5641 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.9158215Z Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-tlwg-loma-otf all 1:0.7.3-1 [107 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:31.9578259Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-unifont all 1:15.1.01-1build1 [2993 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.0813183Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7472 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.3050042Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss3 amd64 2:3.98-1ubuntu0.3 [1445 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.4006337Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss3-tools amd64 2:3.98-1ubuntu0.3 [615 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.4682175Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-encodings all 1:1.0.5-0ubuntu2 [578 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.5312456Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-utils amd64 1:7.7+6build3 [94.4 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.5724659Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 xfonts-cyrillic all 1:1.0.5+nmu1 [384 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.6346919Z Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 xfonts-scalable all 1:1.0.3-1.3 [304 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.6792319Z Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 xserver-common all 2:21.1.12-1ubuntu1.9 [35.0 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:32.7192167Z Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 xvfb amd64 2:21.1.12-1ubuntu1.9 [877 kB]
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.5542718Z Fetched 25.9 MB in 1s (17.6 MB/s)
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.6298719Z Selecting previously unselected package fonts-ipafont-gothic.
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7200532Z (Reading database ... 
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7201010Z (Reading database ... 5%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7201302Z (Reading database ... 10%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7201594Z (Reading database ... 15%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7201902Z (Reading database ... 20%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7202170Z (Reading database ... 25%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7202460Z (Reading database ... 30%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7202752Z (Reading database ... 35%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7203004Z (Reading database ... 40%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7203377Z (Reading database ... 45%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7203704Z (Reading database ... 50%
+e2e	Install Playwright Browsers	2026-11-03T09:53:33.7593912Z (Reading database ... 55%
+e2e	Install Playwright Browsers	2026-11-03T09:53:34.0897404Z (Reading database ... 60%
+e2e	Install Playwright Browsers	2026-11-03T09:53:34.2734627Z (Reading database ... 65%
+e2e	Install Playwright Browsers	2026-11-03T09:53:34.4373920Z (Reading database ... 70%
+e2e	Install Playwright Browsers	2026-11-03T09:53:34.6792272Z (Reading database ... 75%
+e2e	Install Playwright Browsers	2026-11-03T09:53:35.0965933Z (Reading database ... 80%
+e2e	Install Playwright Browsers	2026-11-03T09:53:35.6364482Z (Reading database ... 85%
+e2e	Install Playwright Browsers	2026-11-03T09:53:36.3725867Z (Reading database ... 90%
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.1955527Z (Reading database ... 95%
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.1956798Z (Reading database ... 100%
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.1957252Z (Reading database ... 214038 files and directories currently installed.)
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.1998998Z Preparing to unpack .../00-fonts-ipafont-gothic_00303-21ubuntu1_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.2078257Z Unpacking fonts-ipafont-gothic (00303-21ubuntu1) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.4151047Z Preparing to unpack .../01-libglib2.0-data_2.80.0-6ubuntu3.10_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.4163466Z Unpacking libglib2.0-data (2.80.0-6ubuntu3.10) over (2.80.0-6ubuntu3.9) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.4409321Z Preparing to unpack .../02-libglib2.0-bin_2.80.0-6ubuntu3.10_amd64.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.4419113Z Unpacking libglib2.0-bin (2.80.0-6ubuntu3.10) over (2.80.0-6ubuntu3.9) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.5633619Z Preparing to unpack .../03-gir1.2-glib-2.0_2.80.0-6ubuntu3.10_amd64.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.5643175Z Unpacking gir1.2-glib-2.0:amd64 (2.80.0-6ubuntu3.10) over (2.80.0-6ubuntu3.9) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.5920541Z Preparing to unpack .../04-libglib2.0-0t64_2.80.0-6ubuntu3.10_amd64.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.6332083Z Unpacking libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.10) over (2.80.0-6ubuntu3.9) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.6640896Z Selecting previously unselected package fonts-freefont-ttf.
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.6746595Z Preparing to unpack .../05-fonts-freefont-ttf_20211204+svn4273-2_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.6750559Z Unpacking fonts-freefont-ttf (20211204+svn4273-2) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.7433170Z Selecting previously unselected package fonts-tlwg-loma-otf.
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.7534706Z Preparing to unpack .../06-fonts-tlwg-loma-otf_1%3a0.7.3-1_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.7538740Z Unpacking fonts-tlwg-loma-otf (1:0.7.3-1) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.7677327Z Selecting previously unselected package fonts-unifont.
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.7776401Z Preparing to unpack .../07-fonts-unifont_1%3a15.1.01-1build1_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.7781356Z Unpacking fonts-unifont (1:15.1.01-1build1) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.8726970Z Selecting previously unselected package fonts-wqy-zenhei.
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.8827681Z Preparing to unpack .../08-fonts-wqy-zenhei_0.9.45-8_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:37.8901650Z Unpacking fonts-wqy-zenhei (0.9.45-8) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.2954791Z Preparing to unpack .../09-libnss3_2%3a3.98-1ubuntu0.3_amd64.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.2968533Z Unpacking libnss3:amd64 (2:3.98-1ubuntu0.3) over (2:3.98-1ubuntu0.2) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.3356771Z Preparing to unpack .../10-libnss3-tools_2%3a3.98-1ubuntu0.3_amd64.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.3367049Z Unpacking libnss3-tools (2:3.98-1ubuntu0.3) over (2:3.98-1ubuntu0.2) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.3615396Z Selecting previously unselected package xfonts-encodings.
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.3717220Z Preparing to unpack .../11-xfonts-encodings_1%3a1.0.5-0ubuntu2_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.3721310Z Unpacking xfonts-encodings (1:1.0.5-0ubuntu2) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.3890918Z Selecting previously unselected package xfonts-utils.
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.3991608Z Preparing to unpack .../12-xfonts-utils_1%3a7.7+6build3_amd64.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.3995124Z Unpacking xfonts-utils (1:7.7+6build3) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.4199547Z Selecting previously unselected package xfonts-cyrillic.
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.4301975Z Preparing to unpack .../13-xfonts-cyrillic_1%3a1.0.5+nmu1_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.4306265Z Unpacking xfonts-cyrillic (1:1.0.5+nmu1) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.4488672Z Selecting previously unselected package xfonts-scalable.
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.4589670Z Preparing to unpack .../14-xfonts-scalable_1%3a1.0.3-1.3_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.4594003Z Unpacking xfonts-scalable (1:1.0.3-1.3) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.4843375Z Preparing to unpack .../15-xserver-common_2%3a21.1.12-1ubuntu1.9_all.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.4853687Z Unpacking xserver-common (2:21.1.12-1ubuntu1.9) over (2:21.1.12-1ubuntu1.8) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.5694426Z Preparing to unpack .../16-xvfb_2%3a21.1.12-1ubuntu1.9_amd64.deb ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.5704908Z Unpacking xvfb (2:21.1.12-1ubuntu1.9) over (2:21.1.12-1ubuntu1.8) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6053956Z Setting up fonts-wqy-zenhei (0.9.45-8) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6132331Z Setting up fonts-freefont-ttf (20211204+svn4273-2) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6141303Z Setting up libnss3:amd64 (2:3.98-1ubuntu0.3) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6153653Z Setting up libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.10) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6226552Z Setting up libglib2.0-data (2.80.0-6ubuntu3.10) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6234992Z Setting up fonts-tlwg-loma-otf (1:0.7.3-1) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6243879Z Setting up xfonts-encodings (1:1.0.5-0ubuntu2) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6252235Z Setting up gir1.2-glib-2.0:amd64 (2.80.0-6ubuntu3.10) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6260341Z Setting up fonts-ipafont-gothic (00303-21ubuntu1) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6299891Z update-alternatives: using /usr/share/fonts/opentype/ipafont-gothic/ipag.ttf to provide /usr/share/fonts/truetype/fonts-japanese-gothic.ttf (fonts-japanese-gothic.ttf) in auto mode
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6307466Z Setting up xserver-common (2:21.1.12-1ubuntu1.9) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6315847Z Setting up libnss3-tools (2:3.98-1ubuntu0.3) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6324249Z Setting up fonts-unifont (1:15.1.01-1build1) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6333087Z Setting up xvfb (2:21.1.12-1ubuntu1.9) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6342166Z Setting up libglib2.0-bin (2.80.0-6ubuntu3.10) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6351286Z Setting up xfonts-utils (1:7.7+6build3) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6377018Z Setting up xfonts-cyrillic (1:1.0.5+nmu1) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6601775Z Setting up xfonts-scalable (1:1.0.3-1.3) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:38.6787238Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.1981360Z Processing triggers for man-db (2.12.0-4build2) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.1998972Z Not building database; man-db/auto-update is not 'true'.
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.2009148Z Processing triggers for fontconfig (2.15.0-1.1ubuntu2) ...
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.8149684Z 
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.8150477Z Running kernel seems to be up-to-date.
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.8150940Z 
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.8151094Z Restarting services...
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.8489994Z  systemctl restart irqbalance.service packagekit.service php8.3-fpm.service polkit.service udisks2.service
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9398079Z 
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9399110Z Service restarts being deferred:
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9400258Z  systemctl restart ModemManager.service
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9401052Z  systemctl restart networkd-dispatcher.service
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9401451Z 
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9401733Z No containers need to be restarted.
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9402082Z 
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9402487Z No user sessions are running outdated binaries.
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9402812Z 
+e2e	Install Playwright Browsers	2026-11-03T09:53:42.9403141Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+e2e	Install Playwright Browsers	2026-11-03T09:53:43.7470837Z Downloading Chrome for Testing 153.0.8010.12 (playwright chromium v1243) from https://cdn.playwright.dev/builds/cft/153.0.8010.12/linux64/chrome-linux64.zip
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.1221745Z |                                                                                |   0% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.2717647Z |■■■■■■■■                                                                        |  10% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.3689257Z |■■■■■■■■■■■■■■■■                                                                |  20% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.4467604Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.5192301Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.5884165Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.6745480Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.7376201Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.7962682Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.8453441Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:44.8981556Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 186.8 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.5520227Z Chrome for Testing 153.0.8010.12 (playwright chromium v1243) downloaded to /home/runner/.cache/ms-playwright/chromium-1243
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.5522267Z Downloading FFmpeg (playwright ffmpeg v1011) from https://cdn.playwright.dev/dbazure/download/playwright/builds/ffmpeg/1011/ffmpeg-linux.zip
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8088659Z |                                                                                |   0% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8141111Z |■■■■■■■■                                                                        |  10% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8164849Z |■■■■■■■■■■■■■■■■                                                                |  20% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8187612Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8194923Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8212822Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8227947Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8238407Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8249517Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8259862Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8263576Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 2.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8665317Z FFmpeg (playwright ffmpeg v1011) downloaded to /home/runner/.cache/ms-playwright/ffmpeg-1011
+e2e	Install Playwright Browsers	2026-11-03T09:53:47.8668452Z Downloading Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243) from https://cdn.playwright.dev/builds/cft/153.0.8010.12/linux64/chrome-headless-shell-linux64.zip
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.1362225Z |                                                                                |   0% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.2186261Z |■■■■■■■■                                                                        |  10% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.2652113Z |■■■■■■■■■■■■■■■■                                                                |  20% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.2981554Z |■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.3281416Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.3684999Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.3953522Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.4377907Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.4608299Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.4875354Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:48.5124099Z |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 114.3 MiB
+e2e	Install Playwright Browsers	2026-11-03T09:53:49.9103008Z Chrome Headless Shell 153.0.8010.12 (playwright chromium-headless-shell v1243) downloaded to /home/runner/.cache/ms-playwright/chromium_headless_shell-1243
+e2e	Run Playwright tests	2026-11-03T09:53:49.9325863Z ##[group]Run npm run test
+e2e	Run Playwright tests	2026-11-03T09:53:49.9326208Z npm run test
+e2e	Run Playwright tests	2026-11-03T09:53:49.9352547Z shell: /usr/bin/bash -e {0}
+e2e	Run Playwright tests	2026-11-03T09:53:49.9352951Z env:
+e2e	Run Playwright tests	2026-11-03T09:53:49.9353437Z   SESSION_URL: ***
+e2e	Run Playwright tests	2026-11-03T09:53:49.9353675Z   ADMIN_URL: 
+e2e	Run Playwright tests	2026-11-03T09:53:49.9353977Z   ADMIN_EMAIL: ***
+e2e	Run Playwright tests	2026-11-03T09:53:49.9354230Z   ADMIN_PASSWORD: ***
+e2e	Run Playwright tests	2026-11-03T09:53:49.9354518Z ##[endgroup]
+e2e	Run Playwright tests	2026-11-03T09:53:50.0072191Z 
+e2e	Run Playwright tests	2026-11-03T09:53:50.0072929Z > ai-training@1.0.0 test
+e2e	Run Playwright tests	2026-11-03T09:53:50.0073299Z > playwright test
+e2e	Run Playwright tests	2026-11-03T09:53:50.0073533Z 
+e2e	Run Playwright tests	2026-11-03T09:53:50.5869834Z 
+e2e	Run Playwright tests	2026-11-03T09:53:50.5870882Z Running 7 tests using 1 worker
+e2e	Run Playwright tests	2026-11-03T09:54:20.7262846Z ·······
+e2e	Run Playwright tests	2026-11-03T09:54:20.7265419Z   7 passed (30.3s)
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7642233Z ##[group]Run actions/upload-artifact@v4
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7642740Z with:
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7643063Z   name: playwright-report
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7643377Z   path: playwright-report/
+e2e	Run actions/upload-artifact@v4	test-results/results.json
+e2e	Run actions/upload-artifact@v4	
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7643753Z   retention-days: 30
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7644000Z   if-no-files-found: warn
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7644256Z   compression-level: 6
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7644556Z   overwrite: false
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7644786Z   include-hidden-files: false
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7645088Z env:
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7645463Z   SESSION_URL: ***
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7645745Z   ADMIN_URL: 
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7645989Z   ADMIN_EMAIL: ***
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7646278Z   ADMIN_PASSWORD: ***
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.7646512Z ##[endgroup]
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.8930165Z (node:3337) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.8930974Z (Use `node --trace-deprecation ...` to show where the warning was created)
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.8973075Z Multiple search paths detected. Calculating the least common ancestor of all paths
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.8975111Z The least common ancestor is /home/runner/work/AI-training-repo/AI-training-repo. This will be the root directory of the artifact
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.8976211Z With the provided path, there will be 2 files uploaded
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.8979326Z Artifact name is valid!
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:20.8980069Z Root directory input is valid!
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.0985595Z Beginning upload of artifact content to blob storage
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.1261890Z (node:3337) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.1681588Z Uploaded bytes 205194
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.1821386Z Finished uploading artifact content to blob storage!
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.1822351Z SHA256 digest of uploaded artifact zip is f99b0eb4ffb66ba971a32629eff2ca3b71152dbe34690800d9d9b520b34d65a2
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.1822966Z Finalizing artifact upload
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.6769684Z Artifact playwright-report.zip successfully finalized. Artifact ID 13220976808
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.6770939Z Artifact playwright-report has been successfully uploaded! Final size is 205194 bytes. Artifact ID is 13220976808
+e2e	Run actions/upload-artifact@v4	2026-11-03T09:54:21.6775259Z Artifact download URL: https://github.com/AnnaMark90/AI-training-repo/actions/runs/41614491572/artifacts/13220976808
+e2e	Test summary	2026-11-03T09:54:21.6914221Z ##[group]Run node -e '
+e2e	Test summary	2026-11-03T09:54:21.6914567Z node -e '
+e2e	Test summary	2026-11-03T09:54:21.6914988Z   if (!fs.existsSync(p)) { console.log("::warning::No results.json produced"); process.exit(0); }
+e2e	Test summary	2026-11-03T09:54:21.6915483Z   const r = JSON.parse(fs.readFileSync(p, "utf8"));
+e2e	Test summary	2026-11-03T09:54:21.6915830Z   const stats = r.stats || {};
+e2e	Test summary	2026-11-03T09:54:21.6916144Z   const lines = [];
+e2e	Test summary	2026-11-03T09:54:21.6916460Z   lines.push("## Playwright summary");
+e2e	Test summary	2026-11-03T09:54:21.6916749Z   lines.push("");
+e2e	Test summary	2026-11-03T09:54:21.6917100Z   lines.push(`- **Passed:** ${stats.passed ?? 0}`);
+e2e	Test summary	2026-11-03T09:54:21.6917481Z   lines.push(`- **Failed:** ${stats.failed ?? 0}`);
+e2e	Test summary	2026-11-03T09:54:21.6917842Z   lines.push(`- **Flaky:** ${stats.flaky ?? 0}`);
+e2e	Test summary	2026-11-03T09:54:21.6918218Z   lines.push(`- **Skipped:** ${stats.skipped ?? 0}`);
+e2e	Test summary	2026-11-03T09:54:21.6918667Z   lines.push(`- **Duration:** ${((stats.duration ?? 0) / 1000).toFixed(1)}s`);
+e2e	Test summary	2026-11-03T09:54:21.6919181Z   const failed = (r.suites || []).flatMap(collectFailed);
+e2e	Test summary	2026-11-03T09:54:21.6919789Z   if (failed.length) {
+e2e	Test summary	2026-11-03T09:54:21.6920074Z     lines.push("");
+e2e	Test summary	2026-11-03T09:54:21.6920395Z     lines.push("### Failed tests");
+e2e	Test summary	2026-11-03T09:54:21.6920698Z     lines.push("");
+e2e	Test summary	2026-11-03T09:54:21.6921034Z     failed.forEach(f => lines.push(`- ${f}`));
+e2e	Test summary	2026-11-03T09:54:21.6921354Z   }
+e2e	Test summary	2026-11-03T09:54:21.6921694Z   fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n");
+e2e	Test summary	2026-11-03T09:54:21.6922292Z   function collectFailed(suite) {
+e2e	Test summary	2026-11-03T09:54:21.6922609Z     const out = [];
+e2e	Test summary	2026-11-03T09:54:21.6922910Z     for (const spec of suite.specs || []) {
+e2e	Test summary	2026-11-03T09:54:21.6923245Z       for (const t of spec.tests || []) {
+e2e	Test summary	2026-11-03T09:54:21.6923656Z         const err = (t.results || []).find(res => res.status === "failed");
+e2e	Test summary	2026-11-03T09:54:21.6924090Z         if (err) out.push(`${spec.file || ""}: ${t.title}`);
+e2e	Test summary	2026-11-03T09:54:21.6924437Z       }
+e2e	Test summary	2026-11-03T09:54:21.6924670Z     }
+e2e	Test summary	2026-11-03T09:54:21.6925046Z     for (const child of suite.suites || []) out.push(...collectFailed(child));
+e2e	Test summary	2026-11-03T09:54:21.6925442Z     return out;
+e2e	Test summary	2026-11-03T09:54:21.6925682Z   }
+e2e	Test summary	2026-11-03T09:54:21.6925944Z '
+e2e	Test summary	2026-11-03T09:54:21.6951858Z shell: /usr/bin/bash -e {0}
+e2e	Test summary	2026-11-03T09:54:21.6952162Z env:
+e2e	Test summary	2026-11-03T09:54:21.6952702Z   SESSION_URL: ***
+e2e	Test summary	2026-11-03T09:54:21.6952980Z   ADMIN_URL: 
+e2e	Test summary	2026-11-03T09:54:21.6953282Z   ADMIN_EMAIL: ***
+e2e	Test summary	2026-11-03T09:54:21.6953570Z   ADMIN_PASSWORD: ***
+e2e	Test summary	2026-11-03T09:54:21.6953844Z ##[endgroup]
+e2e	Test summary	2026-11-03T09:54:21.7199933Z [eval]:2
+e2e	Test summary	2026-11-03T09:54:21.7200902Z   if (!fs.existsSync(p)) { console.log("::warning::No results.json produced"); process.exit(0); }
+e2e	Test summary	2026-11-03T09:54:21.7201750Z                      ^
+e2e	Test summary	2026-11-03T09:54:21.7202235Z 
+e2e	Test summary	2026-11-03T09:54:21.7202564Z ReferenceError: p is not defined
+e2e	Test summary	2026-11-03T09:54:21.7203007Z     at [eval]:2:22
+e2e	Test summary	2026-11-03T09:54:21.7203492Z     at runScriptInThisContext (node:internal/vm:219:10)
+e2e	Test summary	2026-11-03T09:54:21.7204070Z     at node:internal/process/execution:485:12
+e2e	Test summary	2026-11-03T09:54:21.7204562Z     at [eval]-wrapper:6:24
+e2e	Test summary	2026-11-03T09:54:21.7205036Z     at runScriptInContext (node:internal/process/execution:483:60)
+e2e	Test summary	2026-11-03T09:54:21.7205548Z     at evalFunction (node:internal/process/execution:317:30)
+e2e	Test summary	2026-11-03T09:54:21.7206044Z     at evalTypeScript (node:internal/process/execution:329:3)
+e2e	Test summary	2026-11-03T09:54:21.7206469Z     at node:internal/main/eval_string:71:3
+e2e	Test summary	2026-11-03T09:54:21.7206746Z 
+e2e	Test summary	2026-11-03T09:54:21.7206918Z Node.js v26.13.0
+e2e	Test summary	2026-11-03T09:54:21.7225933Z ##[error]Process completed with exit code 1.
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.7356816Z Post job cleanup.
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8071076Z [command]/usr/bin/git version
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8080550Z git version 2.55.0
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8100421Z Temporarily overriding HOME='/home/runner/work/_temp/f24fc74a-7346-4638-9586-706d9f749e9f' before making global git config changes
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8101699Z Adding repository directory to the temporary git global config as a safe directory
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8103044Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AI-training-repo/AI-training-repo
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8150885Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8175956Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8342354Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8362879Z http.https://github.com/.extraheader
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8371211Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8462439Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8623545Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+e2e	Post Run actions/checkout@v4	2026-11-03T09:54:21.8645773Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+e2e	Complete job	2026-11-03T09:54:21.8915041Z Cleaning up orphan processes
+e2e	Complete job	2026-11-03T09:54:21.9211127Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache@v4, actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
