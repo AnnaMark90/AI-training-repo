@@ -6,6 +6,9 @@
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
+    "auth": "playwright test --grep AUTH-",
+    "admin": "playwright test --grep ADM-",
+    "account": "playwright test --grep ACC-",
     "report": "playwright show-report",
     "lint": "eslint .",
     "typecheck": "tsc"

@@ -99,6 +99,9 @@ Copy-Item .env.example .env
 | `npm test`            | Run all tests (headless)                   |
 | `npm run test:headed` | Run with a visible browser                 |
 | `npm run test:ui`     | Playwright UI mode                         |
+| `npm run auth`        | Run authentication tests (`AUTH-*`)        |
+| `npm run admin`       | Run admin tests (`ADM-*`)                  |
+| `npm run account`     | Run account tests (`ACC-*`)                |
 | `npm run report`      | Open the last HTML report                  |
 | `npm run lint`        | ESLint (enforces the architecture rules)   |
 | `npm run typecheck`   | TypeScript check without emitting          |
