@@ -9,6 +9,7 @@ import { AccountOverviewPage } from '../pages/account/overview.page';
 import { AdminLoginPage } from '../pages/admin/admin-login.page';
 import { AdminOrdersPage } from '../pages/admin/admin-orders.page';
 import { StorePage } from '../pages/store/store.page';
+import { ProductPage } from '../pages/store/product.page';
 
 type AuthFixtures = {
   authHelper: AuthHelper;
@@ -17,6 +18,7 @@ type AuthFixtures = {
   adminLoginPage: AdminLoginPage;
   adminOrdersPage: AdminOrdersPage;
   storePage: StorePage;
+  productPage: ProductPage;
   /** Admin API client with the admin session: works in any project, whoever is logged in the browser. */
   adminApi: AdminApi;
   /** Customer registered by the setup project on your stand. */
@@ -41,6 +43,9 @@ export const test = base.extend<AuthFixtures>({
   },
   storePage: async ({ page }, use) => {
     await use(new StorePage(page));
+  },
+  productPage: async ({ page }, use) => {
+    await use(new ProductPage(page));
   },
   adminApi: async ({ playwright, baseURL }, use) => {
     const request = await playwright.request.newContext({ baseURL, storageState: ADMIN_STORAGE_STATE });
